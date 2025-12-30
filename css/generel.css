@@ -1,0 +1,180 @@
+/*-------------- RESET ----------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*-------------- VARIABLER ----------------*/
+html {
+  /* Colours */
+  --bg-base: #fbf8f4;
+  --red-main: #913e45;
+  --green-main: #b2b681;
+  --black-main: #121212;
+  --black-var1: #302f2f;
+  --black-var2: #505050;
+  --green-button: #8c8f62;
+  --green-var1: #d4d79c;
+  --green-var2: #ebedd0;
+  --red-button: #410e20;
+  --red-var1: #61282d;
+  --red-var2: #c0555f;
+  --red-var3: #dda7ac;
+  --brown-var1: #a69586;
+  --brown-var2: #c4af9c;
+  --brown-var3: #ddccbe;
+  --brown-var4: #ebe0d7;
+
+  /* Fonts */
+  --font-h1-mobile: "Cabin", sans-serif;
+  --font-h1-web: "Cabin", sans-serif;
+  --font-h2-mobile: "Instrument Serif", serif;
+  --font-h2-web: "Oswald", sans-serif;
+  --font-p-mobile: "Reddit Sans", sans-serif;
+  --font-p-web: --;
+}
+/*-------------- TEKST ----------------*/
+.h1-mobile {
+  color: var(--black-main);
+  text-align: center;
+  /* H1 MOBILE */
+  font-family: Cabin;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2px;
+}
+
+/*---------------- BODY ----------------*/
+body {
+  background-color: var(--bg-base);
+}
+
+/*---------------- HEADER ----------------*/
+
+header {
+  position: sticky;
+  height: 13vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--green-main);
+}
+
+.logo-wrapper {
+  width: 220px;
+  height: auto;
+  margin-left: 15px;
+}
+
+.logo-wrapper svg * {
+  fill: var(--red-button);
+}
+
+/* nav {
+  display: flex;
+  align-items: center;
+} */
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  font-family: var(--font-h1-web);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  display: block;
+  padding: 10px;
+  color: var(--red-button);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.menu a:hover {
+  color: var(--green-var2);
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red-button);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: var(--bg-base);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
