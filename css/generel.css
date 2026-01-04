@@ -10,6 +10,10 @@ img {
   display: block;
 }
 
+main {
+  max-width: 1200px;
+}
+
 /*-------------- VARIABLER ----------------*/
 html {
   /* Colours */
@@ -37,10 +41,10 @@ html {
   --font-h2-mobile: "Instrument Serif", serif;
   --font-h2-web: "Oswald", sans-serif;
   --font-p-mobile: "Reddit Sans", sans-serif;
-  --font-p-web: --;
+  --font-p-web: ;
 }
 /*-------------- TEKST ----------------*/
-.h1-mobile {
+.h1_mobile {
   color: var(--black-main);
   text-align: center;
   /* H1 MOBILE */
@@ -50,6 +54,45 @@ html {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -2px;
+}
+
+.h2_mobile {
+  color: var(--black-main);
+  text-align: center;
+  /* H2 MOBILE */
+  font-family: "Carrois Gothic SC";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  text-transform: uppercase;
+}
+
+.fontknap {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/*---------------- LINK KNAPPER (besoeg) ----------------*/
+.besoeg {
+  display: flex;
+  width: 210px;
+  height: 48px;
+  padding: 14px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+  background: var(--red-button);
+  color: #f5f5f5;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 /*---------------- BODY ----------------*/
