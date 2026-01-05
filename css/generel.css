@@ -18,6 +18,23 @@ main {
 
 div img {
   padding: 20px 20px 20px 20px;
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+/* ------------ANIMATION -------------*/
+
+@keyframes pulse {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /*-------------- VARIABLER ----------------*/
