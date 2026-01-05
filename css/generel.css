@@ -170,7 +170,7 @@ a:link {
 
 main a:hover {
   color: var(--blue-main);
-  background-color: var(--blue-var1);
+  background-color: var(--blue-var2);
 }
 
 /*---------------- MEDIA QUERY WEB ----------------*/
