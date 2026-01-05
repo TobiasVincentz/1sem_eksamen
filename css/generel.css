@@ -14,23 +14,26 @@ main {
   max-width: 1200px;
 }
 
+/*-------------- IMG ----------------*/
+
+div img {
+  padding: 20px 20px 20px 20px;
+}
+
 /*-------------- VARIABLER ----------------*/
 html {
   /* Colours */
   --bg-base: #fbf8f4;
-  --red-main: #913e45;
-  --green-main: #b2b681;
+  --blue-main: #465ba3;
+  --blue-var1: #7e94bf;
+  --blue-var2: #b8c3d9;
+  --blue-var3: #e8f0ff;
+  --blue-var4: #ccdcfa;
   --black-main: #121212;
   --black-var1: #302f2f;
   --black-var2: #505050;
-  --green-button: #8c8f62;
-  --green-var1: #d4d79c;
-  --green-var2: #ebedd0;
-  --red-button: #410e20;
-  --red-var1: #61282d;
-  --red-var2: #c0555f;
-  --red-var3: #dda7ac;
-  --brown-var1: #a69586;
+  --blue-button: #2e3e74;
+  --brown-var1: #41281a;
   --brown-var2: #c4af9c;
   --brown-var3: #ddccbe;
   --brown-var4: #ebe0d7;
@@ -38,35 +41,59 @@ html {
   /* Fonts */
   --font-h1-mobile: "Cabin", sans-serif;
   --font-h1-web: "Cabin", sans-serif;
-  --font-h2-mobile: "Instrument Serif", serif;
-  --font-h2-web: "Oswald", sans-serif;
-  --font-p-mobile: "Reddit Sans", sans-serif;
-  --font-p-web: ;
+  --font-h1-fix: "Cabin", sans-serif;
+  --font-h2-mobile: "Carrois Gothic SC", sans-serif;
+  --font-h2-web: "Carrois Gothic SC", sans-serif;
+  --font-p-mobile: "Catamaran", sans-serif;
+  --font-p-web: "Catamaran", sans-serif;
+  --font-h1-footer-web: "Cabin", sans-serif;
+  --font-h2-footer-web: ;
 }
 /*-------------- TEKST ----------------*/
 .h1_mobile {
-  color: var(--black-main);
+  color: var(--brown-var1);
   text-align: center;
-  /* H1 MOBILE */
-  font-family: Cabin;
+  font-family: var(--font-h1-mobile);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -2px;
+  padding: 10px 10px;
+}
+
+.h1_fix {
+  color: var(--brown-var1);
+  text-align: center;
+  font-family: var(--font-h1-mobile);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2px;
+  padding: 10px 10px;
 }
 
 .h2_mobile {
-  color: var(--black-main);
+  color: var(--brown-var1);
   text-align: center;
   /* H2 MOBILE */
-  font-family: "Carrois Gothic SC";
+  font-family: var(--font-h2-mobile);
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.96px;
   text-transform: uppercase;
+}
+
+.p_mobile {
+  color: var(--brown-var1);
+  align-items: center;
+  text-align: left;
+  font-size: 16px;
+  padding: 20px 20px;
+  font-family: var(--font-p-mobile);
 }
 
 .fontknap {
@@ -78,6 +105,34 @@ html {
   line-height: normal;
 }
 
+.h1_footer_web {
+  color: var(--blue-var3);
+  /* H1 MOBILE */
+  font-family: var(--font-h1-mobile);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2px;
+}
+
+.h2_footer_web {
+  color: var(--blue-var2);
+  /* H2 MOBILE */
+  font-family: var(--font-h2-mobile);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  text-transform: uppercase;
+}
+
+.p_footer_web {
+  color: var(--blue-var1);
+  font-family: var(--font-p-mobile);
+}
+
 /*---------------- LINK KNAPPER (besoeg) ----------------*/
 .besoeg {
   display: flex;
@@ -87,12 +142,50 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 70px;
-  background: var(--red-button);
+  background: var(--blue-button);
   color: #f5f5f5;
+  margin: 12px auto;
 }
 
 a:link {
   text-decoration: none;
+}
+
+main a:hover {
+  color: var(--blue-main);
+  background-color: var(--blue-var1);
+}
+
+/*---------------- MEDIA QUERY WEB ----------------*/
+
+@media screen and (min-width: 800px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var;
+  }
+
+  main section {
+    margin-bottom: 18px;
+    padding: 6px 0;
+  }
+
+  .forsideheroimg {
+    margin: 10px 0;
+  }
+
+  /* headers padding top og bund */
+  .forside_tema2_header,
+  .forside_tema3_header,
+  .forside_tema4_header,
+  .forside_tema5_header,
+  .forside_ommig_header {
+    padding: 20px 0;
+  }
+
+  main {
+    margin: 0 auto;
+  }
 }
 
 /*---------------- BODY ----------------*/
@@ -104,12 +197,14 @@ body {
 
 header {
   position: sticky;
+  top: 0;
+  z-index: 100;
   height: 13vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: var(--green-main);
+  background-color: var(--blue-main);
 }
 
 .logo-wrapper {
@@ -119,7 +214,7 @@ header {
 }
 
 .logo-wrapper svg * {
-  fill: var(--red-button);
+  fill: var(--bg-base);
 }
 
 /* nav {
@@ -151,14 +246,14 @@ header {
   text-transform: uppercase;
   display: block;
   padding: 10px;
-  color: var(--red-button);
+  color: var(--bg-base);
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
 }
 
 .menu a:hover {
-  color: var(--green-var2);
+  color: var(--blue-var1);
 }
 
 .burger {
@@ -171,7 +266,7 @@ header {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--red-button);
+  background-color: var(--bg-base);
   margin-bottom: 5px;
   transition: 0.2s linear;
 }
@@ -204,7 +299,7 @@ header {
 
   nav.active .menu {
     display: block;
-    background-color: var(--bg-base);
+    background-color: var(--blue-var2);
     position: absolute;
     top: 94px;
     left: 0;
@@ -221,3 +316,85 @@ header {
     font-size: 24px;
   }
 }
+
+/* FOOTER */
+
+footer section {
+  background-color: var(--blue-main);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+footer .h1_footer_web {
+  color: var(--blue-var3);
+}
+
+footer .h2_footer_web {
+  color: var(--blue-var2);
+}
+
+footer .p_footer_web {
+  color: var(--blue-var1);
+}
+
+footer img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 20px 20px;
+  width: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+footer .footer_tekst {
+  margin: auto;
+}
+
+/* MEDIA QUERY TIL FOOTER MEN OGSÅ ÆNDRINGER I FONT SIZE */
+
+@media screen and (min-width: 800px) {
+  .h1_footer_web {
+    font-size: 64px;
+    align-self: left;
+  }
+
+  .h2_footer_web {
+    font-size: 48px;
+  }
+
+  .p_footer_web {
+    font-size: 36px;
+  }
+
+  .p_mobile {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+
+  footer img {
+    max-width: 300px;
+  }
+
+  footer .footer_tekst {
+    justify-self: left;
+    align-self: left;
+  }
+
+  .h1_mobile {
+    font-size: 64px;
+  }
+
+  .h1_fix {
+    font-size: 48px;
+  }
+
+  .h2_mobile {
+    font-size: 32px;
+  }
+
+  .p_mobile {
+    font-size: 24px;
+  }
+}
+
+/* --------- */

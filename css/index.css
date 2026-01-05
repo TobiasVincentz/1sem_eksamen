@@ -1,7 +1,35 @@
-.forsideheroimg {
-  padding: 0 20px 20px 20px;
+.forside_tema2 {
+  background-color: var(--blue-var3);
 }
 
-section {
-  height: 90vh;
+.forside_tema4 {
+  background-color: var(--blue-var3);
+}
+
+.forside_tema3 {
+  background-color: var(--blue-var1);
+}
+
+.forside_tema5 {
+  background-color: var(--blue-var1);
+}
+
+@media screen and (max-width: 800px) {
+  /* sections i main margin i bund */
+  main section {
+    padding: 6px 0;
+  }
+
+  .forsideheroimg {
+    margin: 10px 0;
+  }
+
+  /* headers padding top og bund */
+  .forside_tema2_header,
+  .forside_tema3_header,
+  .forside_tema4_header,
+  .forside_tema5_header,
+  .forside_ommig_header {
+    padding: 20px 20px;
+  }
 }
