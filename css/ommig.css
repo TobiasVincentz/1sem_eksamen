@@ -11,6 +11,14 @@
   margin-bottom: 40px;
 }
 
+.ommig_section1 {
+  padding: 20px 20px;
+}
+
+.ommig_section4 {
+  padding: 20px 20px;
+}
+
 /* ---------- ACCORDION --------- */
 
 details::details-content {

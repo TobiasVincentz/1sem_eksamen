@@ -16,14 +16,16 @@
   margin-bottom: 40px;
 }
 
-.tema5_section1 .p_mobile {
-  padding: 20px 60px;
-}
 .tema5_section1 {
   padding: 20px 20px;
 }
 
 .tema5_section2 {
+  margin-bottom: 40px;
+  padding: 20px 20px;
+}
+
+.tema5_section4 {
   margin-bottom: 40px;
   padding: 20px 20px;
 }
