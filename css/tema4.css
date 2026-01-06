@@ -9,11 +9,17 @@
 
 .tema4_section2 {
   margin-bottom: 40px;
+  padding: 20px 20px;
 }
 
 .tema4_section3 {
   background-color: var(--blue-var3);
   margin-bottom: 40px;
+  padding: 20px 20px;
+}
+
+.tema4_section4 {
+  padding: 20px 20px;
 }
 
 @media screen and (min-width: 800px) {
