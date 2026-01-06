@@ -2,3 +2,17 @@
   background-color: var(--blue-var3);
   margin-bottom: 40px;
 }
+
+.tema2_section1_header {
+  padding: 40px 40px;
+}
+
+@media screen and (min-width: 800px) {
+  .tema2_section1_galleri {
+    align-self: center;
+  }
+
+  .tema2_section2_validator {
+    align-self: center;
+  }
+}

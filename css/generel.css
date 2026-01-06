@@ -126,7 +126,7 @@ html {
   color: var(--blue-var3);
   /* H1 MOBILE */
   font-family: var(--font-h1-mobile);
-  font-size: 32px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -137,7 +137,7 @@ html {
   color: var(--blue-var2);
   /* H2 MOBILE */
   font-family: var(--font-h2-mobile);
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
